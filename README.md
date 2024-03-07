@@ -15,7 +15,16 @@ Heavily based on <a href="https://github.com/luisllamasbinaburo/ESP32_Faces/">th
  - Mirrored left/right eye animations
  - Automatic or manual blink and look direction
 
-## Component Structure
+## Hardware Used
+ - ESP32 with built-in OLED - https://www.aliexpress.com/item/4000065217965.html (though you can use pretty much any Arduino/ESP8266/ESP8266 and attach a generic I2C OLED)
+ - 3x linear potentiometers - https://www.aliexpress.com/item/1005005859787527.html
+ - Joystick module - https://www.aliexpress.com/item/32901984938.html
+
+## Schematic
+
+
+
+## Software Component Structure
 
 - *Face* is the core object, consisting of left and right eye components, behaviour, expression, a look assistant, and a blink assistant. The outputs of these components are chained together to create the display on each frame:
 
