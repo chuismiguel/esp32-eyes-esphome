@@ -20,9 +20,7 @@ Heavily based on <a href="https://github.com/luisllamasbinaburo/ESP32_Faces/">th
  - 3x linear potentiometers - https://www.aliexpress.com/item/1005005859787527.html
  - Joystick module - https://www.aliexpress.com/item/32901984938.html
 
-## Schematic
-
-
+<img src="https://github.com/playfultechnology/esp32-eyes/blob/main/doc/Schematic_ESP32-OLED-Eyes.png" />
 
 ## Software Component Structure
 
