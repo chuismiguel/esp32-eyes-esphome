@@ -14,7 +14,6 @@ You should have received a copy of the GNU Affero General Public License along w
 #define _FACE_h
 
 #include <Arduino.h>
-#include "Common.h"
 #include "Animations.h"
 #include "EyePresets.h"
 #include "Eye.h"
