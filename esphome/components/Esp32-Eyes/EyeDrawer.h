@@ -14,7 +14,7 @@ You should have received a copy of the GNU Affero General Public License along w
 #define _EYEDRAWER_h
 
 #include <Arduino.h>
-#include "Common.h"
+#include "Common_esp32eyes.h"
 #include "EyeConfig.h"
 
 enum CornerType {T_R, T_L, B_L, B_R};
