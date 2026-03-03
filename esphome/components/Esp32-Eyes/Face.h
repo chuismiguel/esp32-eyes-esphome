@@ -55,9 +55,8 @@ public:
     void LookTop();
     void LookBottom();
     void Wait(unsigned long milliseconds);
-
-protected:
     void Draw();
+
 };
 
 #endif

@@ -27,11 +27,7 @@ void EsphomeDisplayAdapter::drawTriangle(int16_t x0, int16_t y0, int16_t x1, int
                                         int16_t x2, int16_t y2) {
     if (display) {
         // ESPHOME's triangle drawing
-        display->filled_polygon({
-            esphome::display::Point(x0, y0),
-            esphome::display::Point(x1, y1),
-            esphome::display::Point(x2, y2)
-        }, esphome::Color(currentColor, currentColor, currentColor));
+        display->filled_triangle(x0, y0, x1, y1, x2, y2, esphome::Color(currentColor, currentColor, currentColor));
     }
 }
 
