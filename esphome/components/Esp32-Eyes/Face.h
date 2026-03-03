@@ -45,9 +45,9 @@ public:
     void Update();
     void DoBlink();
 
-    bool RandomBehavior = true;
-    bool RandomLook = true;
-    bool RandomBlink = true;
+    bool RandomBehavior = false;
+    bool RandomLook = false;
+    bool RandomBlink = false;
 
     void LookLeft();
     void LookRight();
