@@ -27,6 +27,7 @@ public:
     Face* get_face() { return face_; }
     
     // Configuration setters
+    void set_display(display::Display* display) { display_ = display; }
     void set_screen_width(uint16_t width) { screen_width_ = width; }
     void set_screen_height(uint16_t height) { screen_height_ = height; }
     void set_eye_size(uint16_t size) { eye_size_ = size; }
