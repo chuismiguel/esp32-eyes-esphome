@@ -90,7 +90,6 @@ void Esp32EyesComponent::loop() {
 
 void Esp32EyesComponent::dump_config() {
     ESP_LOGCONFIG(TAG, "ESP32 Eyes Component:");
-    ESP_LOGCONFIG(TAG, "  Display: %s", display_->get_name().c_str());
     ESP_LOGCONFIG(TAG, "  Screen Size: %dx%d", screen_width_, screen_height_);
     ESP_LOGCONFIG(TAG, "  Eye Size: %d", eye_size_);
     ESP_LOGCONFIG(TAG, "  Update Interval: %d ms", update_interval_);
