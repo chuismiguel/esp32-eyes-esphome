@@ -2,8 +2,6 @@
 ESPHOME Display Adapter Implementation
 ***************************************************/
 
-#ifdef USE_ESPHOME_DISPLAY
-
 #include "EsphomeDisplayAdapter.h"
 #include "esphome/components/display/display.h"
 
@@ -50,5 +48,3 @@ void EsphomeDisplayAdapter::clearDisplay() {
         display->fill(esphome::Color::BLACK);
     }
 }
-
-#endif

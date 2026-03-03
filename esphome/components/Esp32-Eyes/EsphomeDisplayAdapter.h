@@ -7,8 +7,6 @@ ESPHOME Display Adapter Implementation
 
 #include "IDisplayAdapter.h"
 
-#ifdef USE_ESPHOME_DISPLAY
-
 namespace esphome {
 namespace display {
 class Display;
@@ -51,7 +49,5 @@ public:
     
     void clearDisplay() override;
 };
-
-#endif
 
 #endif

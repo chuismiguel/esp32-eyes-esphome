@@ -2,8 +2,6 @@
 ESP32 Eyes ESPHOME Component - Implementation
 ***************************************************/
 
-#ifdef USE_ESPHOME_DISPLAY
-
 #include "Esp32EyesComponent.h"
 #include "esphome/core/log.h"
 
@@ -105,5 +103,3 @@ float Esp32EyesComponent::get_setup_priority() const {
 
 }  // namespace esp32_eyes
 }  // namespace esphome
-
-#endif  // USE_ESPHOME_DISPLAY
