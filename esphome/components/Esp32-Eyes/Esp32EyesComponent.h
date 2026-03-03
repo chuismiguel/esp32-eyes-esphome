@@ -3,7 +3,8 @@ ESP32 Eyes ESPHOME Component
 Main component class that integrates Face rendering with ESPHOME Display
 ***************************************************/
 
-#ifdef USE_ESPHOME_DISPLAY
+#ifndef USE_ESPHOME_DISPLAY
+#define USE_ESPHOME_DISPLAY
 
 #ifndef _ESP32_EYES_ESPHOME_COMPONENT_h
 #define _ESP32_EYES_ESPHOME_COMPONENT_h

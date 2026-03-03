@@ -4,7 +4,7 @@ from esphome.components import display
 from esphome.const import CONF_ID, CONF_DISPLAY_ID
 
 DEPENDENCIES = ["display"]
-CODEOWNERS = ["@YourGitHubUsername"]
+CODEOWNERS = ["@chuismiguel"]
 
 esp32_eyes_ns = cg.esphome_ns.namespace("esp32_eyes")
 Esp32EyesComponent = esp32_eyes_ns.class_("Esp32EyesComponent", cg.Component)

@@ -107,7 +107,7 @@ class EyeDrawer {
 
       if (corner == T_R) {
         for(x = 0, y = ry, s = 2 * ry2 + rx2 * (1 - 2 * ry); ry2 * x <= rx2 * y; x++) {
-          u8g2.drawHLine(x0, y0 - y, x);
+          DRAW_HLINE(x0, y0 - y, x);
           if(s >= 0) {
             s += fx2 * (1 - y);
             y--;
@@ -115,7 +115,7 @@ class EyeDrawer {
           s += ry2 * ((4 * x) + 6);
         }         
         for(x = rx, y = 0, s = 2 * rx2 + ry2 * (1 - 2 * rx); rx2 * y <= ry2 * x; y++) {
-          u8g2.drawHLine(x0, y0 - y, x);
+          DRAW_HLINE(x0, y0 - y, x);
           if (s >= 0) {
             s += fy2 * (1 - x);
             x--;
@@ -126,7 +126,7 @@ class EyeDrawer {
 
       else if (corner == B_R) {
         for (x = 0, y = ry, s = 2 * ry2 + rx2 * (1 - 2 * ry); ry2 * x <= rx2 * y; x++) {
-          u8g2.drawHLine(x0, y0 + y -1, x);
+          DRAW_HLINE(x0, y0 + y -1, x);
           if (s >= 0) {
             s += fx2 * (1 - y);
             y--;
@@ -134,7 +134,7 @@ class EyeDrawer {
           s += ry2 * ((4 * x) + 6);
         }
         for (x = rx, y = 0, s = 2 * rx2 + ry2 * (1 - 2 * rx); rx2 * y <= ry2 * x; y++) {
-          u8g2.drawHLine(x0, y0 + y -1, x);
+          DRAW_HLINE(x0, y0 + y -1, x);
           if (s >= 0) {
             s += fy2 * (1 - x);
             x--;
@@ -145,7 +145,7 @@ class EyeDrawer {
 
       else if (corner == T_L) {
         for (x = 0, y = ry, s = 2 * ry2 + rx2 * (1 - 2 * ry); ry2 * x <= rx2 * y; x++) {
-          u8g2.drawHLine(x0-x, y0 - y, x);
+          DRAW_HLINE(x0-x, y0 - y, x);
           if (s >= 0) {
             s += fx2 * (1 - y);
             y--;
@@ -153,7 +153,7 @@ class EyeDrawer {
           s += ry2 * ((4 * x) + 6);
         }
         for (x = rx, y = 0, s = 2 * rx2 + ry2 * (1 - 2 * rx); rx2 * y <= ry2 * x; y++) {
-          u8g2.drawHLine(x0-x, y0 - y, x);
+          DRAW_HLINE(x0-x, y0 - y, x);
           if (s >= 0) {
             s += fy2 * (1 - x);
             x--;
@@ -164,7 +164,7 @@ class EyeDrawer {
 
       else if (corner == B_L) {
         for (x = 0, y = ry, s = 2 * ry2 + rx2 * (1 - 2 * ry); ry2 * x <= rx2 * y; x++) {
-          u8g2.drawHLine(x0-x, y0 + y - 1, x);
+          DRAW_HLINE(x0-x, y0 + y - 1, x);
           if (s >= 0) {
             s += fx2 * (1 - y);
             y--;
@@ -172,7 +172,7 @@ class EyeDrawer {
           s += ry2 * ((4 * x) + 6);
         }
         for (x = rx, y = 0, s = 2 * rx2 + ry2 * (1 - 2 * rx); rx2 * y <= ry2 * x; y++) {
-          u8g2.drawHLine(x0-x, y0 + y , x);
+          DRAW_HLINE(x0-x, y0 + y , x);
           if (s >= 0) {
             s += fy2 * (1 - x);
             x--;
@@ -191,21 +191,21 @@ class EyeDrawer {
       int32_t b = max(y0, y1);
       int32_t w = r-l;
       int32_t h = b-t; 
-      u8g2.setDrawColor(color);
-      u8g2.drawBox(l, t, w, h);
-      u8g2.setDrawColor(1);
+      SET_DRAW_COLOR(color);
+      DRAW_BOX(l, t, w, h);
+      SET_DRAW_COLOR(1);
     }
 
     static void FillRectangularTriangle(int32_t x0, int32_t y0, int32_t x1, int32_t y1, int32_t color) {
-      u8g2.setDrawColor(color);
-      u8g2.drawTriangle(x0, y0, x1, y1, x1, y0);
-      u8g2.setDrawColor(1);
+      SET_DRAW_COLOR(color);
+      DRAW_TRIANGLE(x0, y0, x1, y1, x1, y0);
+      SET_DRAW_COLOR(1);
     }
 
     static void FillTriangle(int32_t x0, int32_t y0, int32_t x1, int32_t y1, int32_t x2, int32_t y2, int32_t color) {
-        u8g2.setDrawColor(color);
-        u8g2.drawTriangle(x0, y0, x1, y1, x2, y2);
-        u8g2.setDrawColor(1);
+        SET_DRAW_COLOR(color);
+        DRAW_TRIANGLE(x0, y0, x1, y1, x2, y2);
+        SET_DRAW_COLOR(1);
     }
 };
 
