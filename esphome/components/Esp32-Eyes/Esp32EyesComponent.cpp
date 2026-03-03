@@ -60,33 +60,33 @@ void Esp32EyesComponent::setup() {
 }
 
 void Esp32EyesComponent::loop() {
-    // if (!face_ || !display_) {
-    //     return;
-    // }
+    if (!face_ || !display_) {
+        return;
+    }
     
-    // uint32_t now = millis();
+    uint32_t now = millis();
     
-    // // Update face at configured interval
-    // if (now - last_update_ >= update_interval_) {
-    //     last_update_ = now;
+    // Update face at configured interval
+    if (now - last_update_ >= update_interval_) {
+        last_update_ = now;
         
-    //     // Update face state
-    //     face_->Update();
+        // Update face state
+        face_->Update();
         
-    //     // Clear and redraw display
-    //     if (display_adapter_) {
-    //         display_adapter_->clearDisplay();
-    //     }
+        // Clear and redraw display
+        if (display_adapter_) {
+            display_adapter_->clearDisplay();
+        }
         
-    //     // Draw the face
-    //     face_->Draw();
+        // Draw the face
+        face_->Draw();
         
-    //     // Send buffer to display
-    //     if (display_adapter_) {
-    //         display_adapter_->sendBuffer();
-    //     }
-    //     display_->update();
-    // }
+        // Send buffer to display
+        if (display_adapter_) {
+            display_adapter_->sendBuffer();
+        }
+        display_->update();
+    }
 }
 
 void Esp32EyesComponent::dump_config() {
