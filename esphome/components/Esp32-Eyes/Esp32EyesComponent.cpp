@@ -6,13 +6,13 @@ ESP32 Eyes ESPHOME Component - Implementation
 #include "esphome/core/log.h"
 #include "Common_esp32eyes.h"
 
+// Global display adapter instance (must live at global scope for macros in Common_esp32eyes.h)
+IDisplayAdapter* g_displayAdapter = nullptr;
+
 namespace esphome {
 namespace esp32_eyes {
 
 static const char *const TAG = "esp32_eyes";
-
-// Global display adapter instance
-IDisplayAdapter* g_displayAdapter = nullptr;
 
 Esp32EyesComponent::Esp32EyesComponent() :
       display_(nullptr),
