@@ -70,16 +70,16 @@ void Esp32EyesComponent::loop() {
     if (now - last_update_ >= update_interval_) {
         last_update_ = now;
         
-        // Update face state
-        face_->Update();
+        // // Update face state
+        // face_->Update();
         
         // Clear and redraw display
         if (display_adapter_) {
             display_adapter_->clearDisplay();
         }
         
-        // Draw the face
-        face_->Draw();
+        // // Draw the face
+        // face_->Draw();
         
         // Send buffer to display
         if (display_adapter_) {

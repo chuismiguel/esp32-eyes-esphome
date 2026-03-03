@@ -6,8 +6,6 @@ This header provides a unified interface for drawing operations
 #ifndef COMMON_ESP32_EYES_h
 #define COMMON_ESP32_EYES_h
 
-#include <Arduino.h>
-
 #include "IDisplayAdapter.h"
 extern IDisplayAdapter* g_displayAdapter;
 
