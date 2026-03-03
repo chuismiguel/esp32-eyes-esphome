@@ -4,6 +4,7 @@ ESP32 Eyes ESPHOME Component - Implementation
 
 #include "Esp32EyesComponent.h"
 #include "esphome/core/log.h"
+#include "Common_esp32eyes.h"
 
 namespace esphome {
 namespace esp32_eyes {
