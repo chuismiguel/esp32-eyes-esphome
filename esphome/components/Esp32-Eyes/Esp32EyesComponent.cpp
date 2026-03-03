@@ -13,8 +13,8 @@ static const char *const TAG = "esp32_eyes";
 // Global display adapter instance
 IDisplayAdapter* g_displayAdapter = nullptr;
 
-Esp32EyesComponent::Esp32EyesComponent(display::Display* display)
-    : display_(display),
+Esp32EyesComponent::Esp32EyesComponent() :
+      display_(nullptr),
       display_adapter_(nullptr),
       face_(nullptr),
       screen_width_(128),

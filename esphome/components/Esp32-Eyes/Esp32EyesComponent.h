@@ -16,7 +16,7 @@ namespace esp32_eyes {
 
 class Esp32EyesComponent : public Component {
 public:
-    Esp32EyesComponent(display::Display* display);
+    Esp32EyesComponent();
     
     // Component lifecycle
     void setup() override;
